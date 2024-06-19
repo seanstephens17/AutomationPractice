@@ -1,16 +1,21 @@
-# This is a sample Python script.
+import requests
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from beautifulsoup4 import BeautifulSoup
+
+response = requests.get('https://www.bbc.com/news')
+
+print(response.status_code)
+# if returns status 200, that means request was successful
+
+# print(response.content) use this to print all content
+
+soup = BeautifulSoup(response.content, 'html.parser')
+print(soup)
+# save page within element
+
+print(soup.find_all('h2'))
+# use this to find any element you want
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
