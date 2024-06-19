@@ -16,6 +16,8 @@ print(soup)
 print(soup.find_all('h2'))
 # use this to find any element you want
 
+# Figure out beautifulsoup Import
+
 
 
 
