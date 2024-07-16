@@ -6,9 +6,12 @@
 </head>
 <body>
     <h1>Home Page</h1>
-    {% for x in range(10) %}
-        {% if x % 2 == 1%}
-            <p>x</p>
+    {% for x in content %}
+        <p>{{x}}</p>  # interprets as a variable
+        {% if x == "tim"%}
+            <p>Hello Tim</p>
+        {% else %}
+            <p>Not Tim</p>
         {% endif %}
     {% endfor %}
 </body>
