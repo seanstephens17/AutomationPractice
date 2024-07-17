@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home Page</title>
-</head>
-<body>
-    <h1>Home Page</h1>
-    {% for x in content %}
-        <p>{{x}}</p>  # interprets as a variable
-        {% if x == "tim"%}
-            <p>Hello Tim</p>
-        {% else %}
-            <p>Not Tim</p>
-        {% endif %}
-    {% endfor %}
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+<h1>Testing</h1>
+{% endblock %}
